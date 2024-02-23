@@ -48,12 +48,16 @@ body, html {
 }
 
 .text {
-    position: relative; /* Position the text relative to its container */
-    bottom: 20px; /* Adjust as needed */
-    left: 105px; /* Adjust as needed */
-    color: rgb(46, 133, 255); /* Text color */
-    font-size: 16px; /* Adjust font size as needed */
-    padding: 2px 5px; /* Adjust padding as needed */
+    position: absolute; /* Changed from relative to absolute */
+    top: 24.8%; /* Adjust this value as needed to position the text correctly */
+    left: 58.55%; /* Center the text relative to the container */
+    transform: translateX(-50%); /* Adjust horizontally to truly center the text */
+    color: rgb(46, 133, 255);
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
 }
 
 /* Styles the search field with a border, rounded corners, and a shadow effect on hover */
@@ -64,6 +68,7 @@ body, html {
     border-radius: 50px;
     padding: 10px;
     margin-bottom: 20px;
+    margin-top: 30px;
     transition: box-shadow 0.3s ease; /* Smooth transition for the shadow effect */
 }
 
