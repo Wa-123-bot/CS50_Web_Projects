@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<!--
+     Google Image Search Simulation Page
+     This HTML document simulates the Google Image Search interface. It allows users to submit image search queries to Google's image search engine, featuring a simple, user-friendly interface with a Google logo and a search input field.
+
+     Author: Sherri
+     Date: 2/23/24
+
+     Usage:
+       - Users can enter image search queries into the text input field.
+       - Submitting the form will redirect users to Google's image search results based on the query.
+       - Navigation links to Google Text Search and Google Advanced Search are provided for additional search options.
+
+     Dependencies:
+       - style.css: Contains styles for the page layout, form, and buttons.
+       - An external SVG is used for the magnifying glass icon in the search field, enhancing the user interface.
+
+     Modifications:
+       - [2/23/24]: Added detailed comments for clarity.
+       - [2/22/24]: Initial creation of the Google Image Search Simulation page.
+-->
+
+<html lang="en">
+
+<head>
+    <!-- Character encoding for the webpage -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="style.css">
+    <title>Google Image Search Simulation</title>
+</head>
+
+<body>
+    <!-- Header Section: Contains links to other search simulations -->
+    <div class="header">
+        <div class="header-links">
+            <!-- Link to the simulated Google Image Search page -->
+            <a href="index.html">Google Text Search</a>
+            <!-- Link to the simulated Google Advanced Search page -->
+            <a href="advanced_search.html">Google Advanced Search</a>
+        </div>
+    </div>
+
+    <!-- Search Container: Holds the Google logo and the image search form -->
+    <main class="search-container">
+        <!-- Google logo displayed at the top of the search container -->
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" class="google-logo">
+        <span class="text">Images</span>
+        <!-- Form for submitting the image search query -->
+        <form action="https://www.google.com/search" method="get">
+            <!-- Search Field: Includes an SVG magnifying glass icon and text input for image search -->
+            <div class="search-field">
+                <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd" stroke="#808080" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="8.5" cy="8.5" r="5"></circle>
+                        <path d="m17.571 17.5-5.571-5.5"></path>
+                    </g>
+                </svg>
+                <input type="text" name="q">
+                <!-- Hidden input to specify image search mode -->
+                <input type="hidden" name="tbm" value="isch">
+            </div>
+            <!-- Button Container: Holds the "Google Image Search" button -->
+            <div class="button-container">
+                <input type="submit" value="Google Image Search">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
+
