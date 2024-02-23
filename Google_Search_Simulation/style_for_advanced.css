@@ -1,0 +1,120 @@
+/* 
+     Google Advanced Search Page CSS
+     This CSS file provides styles for the Google Advanced Search simulation page. 
+
+     Author: Sherri
+     Date: 2/23/24
+
+     Usage:
+       - This CSS file aims to resemble the aesthetic appearance of the actual Google Advanced Search page.
+
+     Dependencies:
+       - None
+
+     Modifications:
+       - [2/23/24]: Added detailed comments for clarity.
+       - [2/22/24]: Initial creation of the CSS file.
+*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+/* Header Section */
+.header {
+    background-color: #ffffff;
+    padding: 30px;
+    text-align: right;
+}
+
+/* Header Links */
+.header-links a {
+    text-decoration: none;
+    color: #1a0dab;
+    margin: 0 10px;
+    position: relative;
+    top: 20px; /* Increased from 0 to 20px to move the links down */
+}
+
+/* Search Container */
+.search-container {
+    margin: 20px;
+}
+
+/* Advanced Search Title */
+.advanced-search-title {
+    color: #d93025; /* Google red */
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+/* Search Label */
+.search-label {
+    display: block;
+    color: #000;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+/* Input Container */
+.input-container {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds space between the label and the input */
+}
+
+/* Input Fields */
+.input-container input[type="text"] {
+    width: 50%; /* Half of the container width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+/* Advanced Search Button */
+.advanced-search-button {
+    color: #fff;
+    background-color: #4d90fe; /* Google blue */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Hover Effect for Advanced Search Button */
+.advanced-search-button:hover {
+    background-color: #357ae8; /* Darker Google blue */
+}
+
+/* Line under the Title */
+.advanced-search-title:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd; /* Light grey line */
+    margin-top: 5px;
+}
+
+/* Adjust Header Links for Top Right Corner */
+.header-links {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .input-container input[type="text"] {
+        width: 100%; /* Full width on smaller screens */
+    }
+    .input-container {
+        flex-direction: column; /* Stack the label and input vertically on small screens */
+    }
+}

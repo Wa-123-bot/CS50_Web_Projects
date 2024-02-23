@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- 
+     Google Advanced Search Simulation Page
+     This HTML document simulates the Google Advanced Search interface. It provides users with
+     options to perform an advanced search with specific criteria, redirecting queries to Google's search engine.
+
+     Author: Sherri
+     Date: 2/23/24
+
+     Usage:
+       - Users can input various search criteria in the form fields.
+       - Submitting the form executes an advanced search on Google based on the provided criteria.
+       - Navigation links to Google Text Search and Google Image Search are available for alternative search options.
+
+     Dependencies:
+       - style_for_advanced.css: Contains styles for the page layout and form elements.
+
+     Modifications:
+       - [2/23/24]: Added detailed comments for clarity.
+       - [2/22/24]: Initial creation of the Google Advanced Search Simulation page.
+-->
+
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="style_for_advanced.css" />
+    <title>Advanced Search</title>
+</head>
+
+<body>
+    <!-- Header Section: Contains links to other search simulations -->
+    <div class="header">
+        <div class="header-links">
+            <!-- Link to the simulated Google Text Search page -->
+            <a href="index.html">Google Search</a>
+            <!-- Link to the simulated Google Image Search page -->
+            <a href="image_search.html">Google Image Search</a>
+        </div>
+    </div>
+    
+    <!-- Search Container: Holds the form for advanced search criteria -->
+    <div class="search-container">
+        <!-- Title for the Advanced Search page -->
+        <h1 class="advanced-search-title">Advanced Search</h1>
+        
+        <!-- Form for submitting the advanced search query -->
+        <form action="https://www.google.com/search" method="get">
+            <!-- Input container for 'all these words' -->
+            <div class="input-container">
+                <label for="as_q" class="search-label">All these words:</label>
+                <input type="text" id="as_q" name="as_q">
+            </div>
+            
+            <!-- Input container for 'this exact word or phrase' -->
+            <div class="input-container">
+                <label for="as_epq" class="search-label">This exact word or phrase:</label>
+                <input type="text" id="as_epq" name="as_epq">
+            </div>
+            
+            <!-- Input container for 'any of these words' -->
+            <div class="input-container">
+                <label for="as_oq" class="search-label">Any of these words:</label>
+                <input type="text" id="as_oq" name="as_oq">
+            </div>
+            
+            <!-- Input container for 'none of these words' -->
+            <div class="input-container">
+                <label for="as_eq" class="search-label">None of these words:</label>
+                <input type="text" id="as_eq" name="as_eq">
+            </div>
+            
+            <!-- Submit button for the form -->
+            <div class="input-container">
+                <input type="submit" value="Advanced Search" class="advanced-search-button">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
