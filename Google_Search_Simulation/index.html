@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Google Text Search Simulation Page
+     This HTML document simulates the Google Text Search interface. It provides users with
+     options to perform a standard Google Search or use the "I'm Feeling Lucky" feature,
+     alongside links to Google Image Search and Advanced Search pages.
+
+     Author: Sherri
+     Date: 2/23/24
+
+     Usage:
+       - Users can enter search queries into the text input field to search across the web.
+       - The "Google Search" button submits the query to Google's search engine.
+       - The "I'm Feeling Lucky" button directs the user to the first search result directly.
+       - Navigation links to Image Search and Advanced Search are provided for convenience.
+
+     Dependencies:
+       - style.css: Stylesheet for the page's layout and aesthetics.
+       - Google logo image and magnifying glass SVG for the search input.
+
+     Modifications:
+       - [2/23/24]: [Add comments for clarity]
+       - [2/22/24]: [Create the page]
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external CSS for styling -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Search</title>
+</head>
+<body>
+    <!-- Header Section: Contains links to other search simulations -->
+    <div class="header">
+        <div class="header-links">
+            <!-- Link to the simulated Google Image Search page -->
+            <a href="image_search.html">Google Image Search</a>
+            <!-- Link to the simulated Google Advanced Search page -->
+            <a href="advanced_search.html">Google Advanced Search</a>
+        </div>
+    </div>
+
+    <!-- Search Container: Holds the Google logo, search input, and buttons -->
+    <div class="search-container">
+        <!-- Google logo displayed at the top of the search container -->
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" />
+        
+        <!-- Form for submitting the search query -->
+        <form action="https://www.google.com/search" method="get">
+            <!-- Search Field: Includes an SVG magnifying glass icon and text input -->
+            <div class="search-field">
+                <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd" stroke="#808080" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="8.5" cy="8.5" r="5"></circle>
+                        <path d="m17.571 17.5-5.571-5.5"></path>
+                    </g>
+                </svg>
+                <!-- Text input for user's search query -->
+                <input type="text" name="q">
+            </div>
+            <!-- Button Container: Holds the "Google Search" and "I'm Feeling Lucky" buttons -->
+            <div class="button-container">
+                <input type="submit" value="Google Search">
+                <input type="submit" name="btnI" value="I'm Feeling Lucky">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
